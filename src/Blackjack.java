@@ -29,7 +29,7 @@ public class Blackjack {
         createDeck();
         showDeck();
 
-        dealToPlayer();
+        dealToPlayer();// deal one card
         dealToPlayer();
 
         dealToDealer();
