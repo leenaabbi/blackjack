@@ -46,7 +46,7 @@ public class Blackjack {
             System.out.println(i + ":" + c.suit + c.rank);
         }
     }
-//         deal two cards to player
+       //deal two cards to player
 
     public void dealToPlayer() {
         Card c = (Card) deck.remove(0);
@@ -54,7 +54,7 @@ public class Blackjack {
 
     }
 
-//         deal two cards to dealer
+         //deal two cards to dealer
     
      public void dealToDealer() {
         Card c = (Card) deck.remove(0);
@@ -74,14 +74,14 @@ public class Blackjack {
         }
     }
 //        while (player choice = hit)[
-//   /*
+//   
 //       deal a card to player}
-//    * check if player is busted and terminate game if busted
+//     check if player is busted and terminate game if busted
 //
 //   }
 //       
 //    }
-//         * while (dealer_sum < 16){
+//         while (dealer_sum < 16){
 //       
 //       deal a card to dealer()
 //       eit game if busted
