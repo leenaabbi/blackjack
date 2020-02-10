@@ -12,21 +12,6 @@ public class Blackjack {
     ArrayList deck = new ArrayList();
     ArrayList playerCards = new ArrayList();
     ArrayList dealerCards = new ArrayList();
-
-    public void createDeck() {
-
-        String[] suits = new String[]{"H", "D", "C", "S"};
-        for (int j = 0; j < 4; j++) {
-            for (int i = 1; i <= 13; i++) {
-                Card card = new Card();
-                card.suit = suits[j];
-                card.rank = i;
-                deck.add(card);
-            }
-        }
-//Collections.shuffle.(deck);
-    }
-
     public void play() {
         createDeck();
         showDeck();
@@ -54,6 +39,22 @@ public class Blackjack {
 
     }
 
+
+    public void createDeck() {
+
+        String[] suits = new String[]{"H", "D", "C", "S"};
+        for (int j = 0; j < 4; j++) {
+            for (int i = 1; i <= 13; i++) {
+                Card card = new Card();
+                card.suit = suits[j];
+                card.rank = i;
+                deck.add(card);
+            }
+        }
+//Collections.shuffle.(deck);
+    }
+
+    
     public void showDeck() {
         for (int i = 0; i < deck.size(); i++) {
             Card c = (Card) deck.get(i);
