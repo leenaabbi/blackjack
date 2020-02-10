@@ -7,7 +7,8 @@ import java.util.Scanner;
  * @author Fujitsu
  */
 public class Blackjack {
-    Scanner scanner =new Scanner(System.in);
+
+    Scanner scanner = new Scanner(System.in);
     ArrayList deck = new ArrayList();
     ArrayList playerCards = new ArrayList();
     ArrayList dealerCards = new ArrayList();
@@ -34,24 +35,23 @@ public class Blackjack {
         dealToDealer();
         dealToPlayer();
         dealToDealer();
-       
+
         showPlayerCard();
         showDealerCard();
 
-        while(true){
+        while (true) {
             System.out.println("Hit or Stay");
             String choice = scanner.nextLine();
-             if(choice.toUpperCase().equals("S")){
-             break;
-             }
-             dealToPlayer();
-             if(calcPlayerSum() > 21){
-                 System.out.println("Sorry you Busted Game Over");
-                 System.exit(0);
-             }
-   }
-        
-        
+            if (choice.toUpperCase().equals("S")) {
+                break;
+            }
+            dealToPlayer();
+            if (calcPlayerSum() > 21) {
+                System.out.println("Sorry you Busted Game Over");
+                System.exit(0);
+            }
+        }
+
     }
 
     public void showDeck() {
@@ -60,7 +60,7 @@ public class Blackjack {
             System.out.println(i + ":" + c.suit + c.rank);
         }
     }
-       //deal two cards to player
+    //deal two cards to player
 
     public void dealToPlayer() {
         Card c = (Card) deck.remove(0);
@@ -68,43 +68,43 @@ public class Blackjack {
 
     }
 
-         //deal two cards to dealer
-    
-     public void dealToDealer() {
+    //deal two cards to dealer
+    public void dealToDealer() {
         Card c = (Card) deck.remove(0);
         dealerCards.add(c);
 
     }
-     public void showPlayerCard() {
-         System.out.println("Player cards:");
+
+    public void showPlayerCard() {
+        System.out.println("Player cards:");
         for (int i = 0; i < playerCards.size(); i++) {
             Card c = (Card) playerCards.get(i);
-            System.out.println( c.rank+ " of " + c.suit  );
+            System.out.println(c.rank + " of " + c.suit);
         }
     }
-     public void showDealerCard() {
+
+    public void showDealerCard() {
         for (int i = 0; i < dealerCards.size(); i++) {
             Card c = (Card) dealerCards.get(i);
-            System.out.println(c.rank+ " of " + c.suit);
+            System.out.println(c.rank + " of " + c.suit);
         }
     }
-          int sum =0;   
-     public int calcPlayerSum(){
-     for (int i = 0; i < playerCards.size(); i++) {
+    int sum = 0;
+
+    public int calcPlayerSum() {
+        for (int i = 0; i < playerCards.size(); i++) {
             Card c = (Card) playerCards.get(i);
-            if(c.rank > 10){
-                sum= sum+ 10; 
+            if (c.rank > 10) {
+                sum = sum + 10;
+            } else {
+                sum = sum + c.rank;
             }
-            else{
-            sum=sum + c.rank;
-            }
-             
-     }
-     return sum;
-     }
-            
+
+        }
+        return sum;
+    }
+
 //    player turn player can hit as many card they loke
-        
 //   
 //       deal a card to player}
 //     check if player is busted and terminate game if busted
