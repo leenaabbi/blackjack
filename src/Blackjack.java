@@ -40,8 +40,7 @@ public class Blackjack {
     }
 
 
-    public void createDeck() {
-
+    public void createDeck(){
         String[] suits = new String[]{"H", "D", "C", "S"};
         for (int j = 0; j < 4; j++) {
             for (int i = 1; i <= 13; i++) {
@@ -53,8 +52,6 @@ public class Blackjack {
         }
 //Collections.shuffle.(deck);
     }
-
-    
     public void showDeck() {
         for (int i = 0; i < deck.size(); i++) {
             Card c = (Card) deck.get(i);
