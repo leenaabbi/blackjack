@@ -105,14 +105,6 @@ public class Blackjack {
         return sum;
     }
 
-//    player turn player can hit as many card they loke
-//   
-//       deal a card to player}
-//     check if player is busted and terminate game if busted
-//
-//   }
-//       
-//    }
 //         while (dealer_sum < 16){
 //       
 //       deal a card to dealer()
