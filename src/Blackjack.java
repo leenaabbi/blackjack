@@ -54,7 +54,7 @@ public class Blackjack {
     public void showDeck() {
         for (int i = 0; i < deck.size(); i++) {
             Card c = (Card) deck.get(i);
-            System.out.println(i + ":" + c.suit + c.rank);
+            System.out.println( c.suit+ " of "  + c.rank);
         }
     }
     //deal two cards to player
