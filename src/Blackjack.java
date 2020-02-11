@@ -30,10 +30,21 @@ public class Blackjack {
                 break;
             }
             dealToPlayer();
+            showPlayerCard();
             if (calcPlayerSum() > 21) {
                 System.out.println("Sorry you Busted Game Over");
                 System.exit(0);
             }
+        }
+             while (true){
+              if(dealer_sum() < 16){
+               dealToDealer();
+               showDealerCard();
+              }
+              if(dealer_sum() > 21){
+              System.out.println("Sorry you Busted Game Over");
+             System.exit(0);
+              }
         }
 
     }
@@ -49,10 +60,10 @@ public class Blackjack {
                 deck.add(card);
             }
         }
-//Collections.shuffle.(deck);
+       //Collections.shuffle.(deck);
     }
     public void showDeck() {
-        for (int i = 0; i < deck.size(); i++) {
+        for(int i = 0; i < deck.size(); i++) {
             Card c = (Card) deck.get(i);
             System.out.println( c.suit+ " of "  + c.rank);
         }
@@ -71,7 +82,6 @@ public class Blackjack {
         dealerCards.add(c);
 
     }
-
     public void showPlayerCard() {
         System.out.println("Player cards:");
         for (int i = 0; i < playerCards.size(); i++) {
@@ -79,15 +89,14 @@ public class Blackjack {
             System.out.println(c.rank + " of " + c.suit);
         }
     }
-
-    public void showDealerCard() {
+    public void showDealerCard(){
+         System.out.println("Dealer cards:");
         for (int i = 0; i < dealerCards.size(); i++) {
             Card c = (Card) dealerCards.get(i);
             System.out.println(c.rank + " of " + c.suit);
         }
     }
     int sum = 0;
-
     public int calcPlayerSum() {
         for (int i = 0; i < playerCards.size(); i++) {
             Card c = (Card) playerCards.get(i);
@@ -100,12 +109,25 @@ public class Blackjack {
         }
         return sum;
     }
-
-//         while (dealer_sum < 16){
-//       
-//       deal a card to dealer()
-//       eit game if busted
-//       }
-//
-//if you reach this point it means no one has busted we need to compare the sums and announce the winner
+         int dealer_sum=0;
+        public int dealer_sum(){
+        for(int i=0; i < deck.size();i++){
+        Card c =(Card)dealerCards.get(i);
+        if(c.rank > 10){
+         dealer_sum=sum+10;
+        }
+        else{
+           dealer_sum=sum+c.rank;
+        }
+        
+        }
+        return dealer_sum;
+        }
+     //  if(dealer_sum() > 21 || <calcPlayerSum()){
+   //         System.out.println("Dealer wins");
+  //}
+     //  else{
+           // System.out.println("You wins");  
+          //  }
+      
 }
