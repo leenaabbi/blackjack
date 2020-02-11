@@ -7,7 +7,6 @@ import java.util.Scanner;
  * @author Fujitsu
  */
 public class Blackjack {
-
     Scanner scanner = new Scanner(System.in);
     ArrayList deck = new ArrayList();
     ArrayList playerCards = new ArrayList();
@@ -24,7 +23,7 @@ public class Blackjack {
         showPlayerCard();
         showDealerCard();
 
-        while (true) {
+        while(true) {
             System.out.println("Hit or Stay");
             String choice = scanner.nextLine();
             if (choice.toUpperCase().equals("S")) {
