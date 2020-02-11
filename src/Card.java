@@ -11,7 +11,7 @@
 public class Card {
     public String suit;//h,d,s,c
     public int rank;//1=ace , 2,3,4,5,6,7,8,9,10,11=jack,12=queen,13=kings
-//    public getBlackjackValue(){
-//    
-//    }
+  // public getBlackjackValue(){
+   
+//   }
 }
