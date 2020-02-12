@@ -71,7 +71,7 @@ public class Blackjack {
     //deal two cards to player
 
     public void dealToPlayer() {
-        Card c = (Card) deck.remove(0);
+        Card c = (Card)deck.remove(0);
         playerCards.add(c);
 
     }
