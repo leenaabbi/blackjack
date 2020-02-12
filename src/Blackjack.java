@@ -22,7 +22,7 @@ public class Blackjack {
 
         showPlayerCard();
         showDealerCard();
-
+    
         while(true) {
             System.out.println("Hit or Stay");
             String choice = scanner.nextLine();
@@ -39,7 +39,7 @@ public class Blackjack {
              while (true){
               if(dealer_sum() < 16){
                dealToDealer();
-               showDealerCard();
+               //showDealerCard();
               }
               if(dealer_sum() > 21){
               System.out.println("Sorry you Busted Game Over");
@@ -62,7 +62,7 @@ public class Blackjack {
         }
        //Collections.shuffle.(deck);
     }
-    public void showDeck() {
+    public void showDeck(){
         for(int i = 0; i < deck.size(); i++) {
             Card c = (Card) deck.get(i);
             System.out.println( c.suit+ " of "  + c.rank);
