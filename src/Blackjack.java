@@ -96,7 +96,7 @@ public class Blackjack {
             System.out.println(c.rank + " of " + c.suit);
         }
     }
-    int sum = 0;
+             int sum = 0;
     public int calcPlayerSum() {
         for (int i = 0; i < playerCards.size(); i++) {
             Card c = (Card) playerCards.get(i);
