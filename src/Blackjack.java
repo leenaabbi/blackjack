@@ -29,8 +29,8 @@ public class Blackjack {
         createDeck();
         showDeck();
 
-        dealToPlayer();// deal one card
-        dealToPlayer();
+        dealToPlayer();// deal one card player
+        dealToPlayer();//deal one card to player
 
         dealToDealer();
         dealToDealer();
@@ -73,19 +73,4 @@ public class Blackjack {
             System.out.println(i + ":" + c.suit + c.rank);
         }
     }
-//        while (player choice = hit)[
-//   
-//       deal a card to player}
-//     check if player is busted and terminate game if busted
-//
-//   }
-//       
-//    }
-//         while (dealer_sum < 16){
-//       
-//       deal a card to dealer()
-//       eit game if busted
-//       }
-//
-//if you reach this point it means no one has busted we need to compare the sums and announce the winner
-}
+
